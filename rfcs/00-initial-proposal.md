@@ -25,7 +25,7 @@ Let's say our CLI generates an initial `flake.nix` with "placeholder" comments:
   }:
   outputs = inputs: inputs.flake-parts.mkFlake {
     inherit inputs;
-    # A toml file is easier to manage
+    # A toml file is easier to manipulate programmatically
     specialArgs.flake-parts-toml = ./nix/flake-parts.toml;
     modules = [
        # and this module could translate the toml into module definitions
